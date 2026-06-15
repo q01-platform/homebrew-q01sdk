@@ -40,4 +40,3 @@ class Q01sdkInt < Formula
     assert_match version.to_s, shell_output("#{bin}/q01sdk --version")
   end
 end
-
