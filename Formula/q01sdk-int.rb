@@ -33,7 +33,7 @@ class Q01sdkInt < Formula
     config_dir = Pathname.new(Dir.home) / ".q01sdk"
     config_dir.mkpath
     env_file = config_dir / ".env"
-    env_file.write("") unless env_file.exist?
+    env_file.write("Host=\"https://app-int.q01.io\"\nEnv=\"int\"\n")
   end
 
   test do
