@@ -3,29 +3,29 @@
 class Q01sdk < Formula
   desc "Q01 Platform SDK CLI"
   homepage "https://app.q01.io"
-  version "VERSION_PLACEHOLDER"
+  version "0.0.0-test"
 
   on_macos do
     on_arm do
-      url "https://app.q01.io/api/v4/q01sdk/download/?file=macarm.tar.gz&version=VERSION_PLACEHOLDER"
-      sha256 "SHA256_MACARM_PLACEHOLDER"
+      url "https://app.q01.io/api/v4/q01sdk/download/?file=macarm.tar.gz&version=0.0.0-test"
+      sha256 "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"
     end
 
     on_intel do
-      url "https://app.q01.io/api/v4/q01sdk/download/?file=mac.tar.gz&version=VERSION_PLACEHOLDER"
-      sha256 "SHA256_MAC_PLACEHOLDER"
+      url "https://app.q01.io/api/v4/q01sdk/download/?file=mac.tar.gz&version=0.0.0-test"
+      sha256 "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
     end
   end
 
   on_linux do
     on_arm do
-      url "https://app.q01.io/api/v4/q01sdk/download/?file=lin.tar.gz&version=VERSION_PLACEHOLDER"
-      sha256 "SHA256_LIN_PLACEHOLDER"
+      url "https://app.q01.io/api/v4/q01sdk/download/?file=lin.tar.gz&version=0.0.0-test"
+      sha256 "cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc"
     end
 
     on_intel do
-      url "https://app.q01.io/api/v4/q01sdk/download/?file=lin.tar.gz&version=VERSION_PLACEHOLDER"
-      sha256 "SHA256_LIN_PLACEHOLDER"
+      url "https://app.q01.io/api/v4/q01sdk/download/?file=lin.tar.gz&version=0.0.0-test"
+      sha256 "cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc"
     end
   end
 
