@@ -2,29 +2,29 @@
 class Q01sdkInt < Formula
   desc "Q01 Platform SDK CLI"
   homepage "https://app-int.q01.io"
-  version "26061508"
+  version "26061601"
 
   on_macos do
     on_arm do
-      url "https://app-int.q01.io/api/v4/q01sdk/download/?file=macarm.tar.gz&version=26061508"
-      sha256 "02b47be580d84930d713b44e907a287d3a29df329267f3170e54e05449aa9148"
+      url "https://app-int.q01.io/api/v4/q01sdk/download/?file=macarm.tar.gz&version=26061601"
+      sha256 "75baed08e168e03b02fc17d8715fd5ae6705e49b6f428885ecc079dc1a2c39c6"
     end
 
     on_intel do
-      url "https://app-int.q01.io/api/v4/q01sdk/download/?file=mac.tar.gz&version=26061508"
-      sha256 "26035af61ef2258952cb3e0fbd14c2891f01b6e7425b927c5225dccc60d10654"
+      url "https://app-int.q01.io/api/v4/q01sdk/download/?file=mac.tar.gz&version=26061601"
+      sha256 "2fde26cc62a7038bcb6e6d0d2ca4ce75e4075b537f0f39e7768ab944f3850f69"
     end
   end
 
   on_linux do
     on_arm do
-      url "https://app-int.q01.io/api/v4/q01sdk/download/?file=lin.tar.gz&version=26061508"
-      sha256 "1b6846d95056c8d11f287285872e6786b79b09e6b4c7a7e8e2060f992e4da9c3"
+      url "https://app-int.q01.io/api/v4/q01sdk/download/?file=lin.tar.gz&version=26061601"
+      sha256 "fc29410ec5ade9e6604087094be984bd85e88663424bf50999cbd34083f45feb"
     end
 
     on_intel do
-      url "https://app-int.q01.io/api/v4/q01sdk/download/?file=lin.tar.gz&version=26061508"
-      sha256 "1b6846d95056c8d11f287285872e6786b79b09e6b4c7a7e8e2060f992e4da9c3"
+      url "https://app-int.q01.io/api/v4/q01sdk/download/?file=lin.tar.gz&version=26061601"
+      sha256 "fc29410ec5ade9e6604087094be984bd85e88663424bf50999cbd34083f45feb"
     end
   end
 
