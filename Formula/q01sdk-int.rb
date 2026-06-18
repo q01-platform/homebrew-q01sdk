@@ -2,34 +2,41 @@
 class Q01sdkInt < Formula
   desc "Q01 Platform SDK CLI"
   homepage "https://app-int.q01.io"
-  version "1.0.56"
+  version "1.0.50"
 
   on_macos do
     on_arm do
-      url "https://app-int.q01.io/api/v4/q01sdk/download/?file=macarm.tar.gz&version=1.0.56"
-      sha256 "ec7a9be5123e838cc9bf3df726a815b4f8c07f722554786918fcf8c1207510bc"
+      url "https://app-int.q01.io/api/v4/q01sdk/download/?file=macarm.tar.gz&version=1.0.50"
+      sha256 "[Q01SDK] [checksum] macarm.tar.gz = ec7a9be5123e838c...
+ec7a9be5123e838cc9bf3df726a815b4f8c07f722554786918fcf8c1207510bc"
     end
 
     on_intel do
-      url "https://app-int.q01.io/api/v4/q01sdk/download/?file=mac.tar.gz&version=1.0.56"
-      sha256 "ff45cb7459092853800e5264249295a90a6c75f80c83f17319a8c3643b29589d"
+      url "https://app-int.q01.io/api/v4/q01sdk/download/?file=mac.tar.gz&version=1.0.50"
+      sha256 "[Q01SDK] [checksum] mac.tar.gz = ff45cb7459092853...
+ff45cb7459092853800e5264249295a90a6c75f80c83f17319a8c3643b29589d"
     end
   end
 
   on_linux do
     on_arm do
-      url "https://app-int.q01.io/api/v4/q01sdk/download/?file=lin.tar.gz&version=1.0.56"
-      sha256 "e702bf5d46b45a3a409e24d5b2b9f67382cd9565e7e6acb7ee0d9edfdacca664"
+      url "https://app-int.q01.io/api/v4/q01sdk/download/?file=lin.tar.gz&version=1.0.50"
+      sha256 "[Q01SDK] [checksum] lin.tar.gz = e702bf5d46b45a3a...
+e702bf5d46b45a3a409e24d5b2b9f67382cd9565e7e6acb7ee0d9edfdacca664"
     end
 
     on_intel do
-      url "https://app-int.q01.io/api/v4/q01sdk/download/?file=lin.tar.gz&version=1.0.56"
-      sha256 "e702bf5d46b45a3a409e24d5b2b9f67382cd9565e7e6acb7ee0d9edfdacca664"
+      url "https://app-int.q01.io/api/v4/q01sdk/download/?file=lin.tar.gz&version=1.0.50"
+      sha256 "[Q01SDK] [checksum] lin.tar.gz = e702bf5d46b45a3a...
+e702bf5d46b45a3a409e24d5b2b9f67382cd9565e7e6acb7ee0d9edfdacca664"
     end
   end
 
   def install
-    bin.install "q01sdk"
+    local_bin = Pathname.new(Dir.home) / ".local" / "bin"
+    local_bin.mkpath
+    cp "q01sdk", local_bin / "q01sdk"
+    chmod 0755, local_bin / "q01sdk"
     config_dir = Pathname.new(Dir.home) / ".q01sdk"
     config_dir.mkpath
     env_file = config_dir / ".env"
@@ -37,6 +44,6 @@ class Q01sdkInt < Formula
   end
 
   test do
-    assert_match version.to_s, shell_output("#{bin}/q01sdk --version")
+    assert_match version.to_s, shell_output("#{Dir.home}/.local/bin/q01sdk --version")
   end
 end
