@@ -2,37 +2,34 @@
 class Q01sdkInt < Formula
   desc "Q01 Platform SDK CLI"
   homepage "https://app-int.q01.io"
-  version "1.0.63"
+  version "1.0.64"
 
   on_macos do
     on_arm do
-      url "https://app-int.q01.io/api/v4/q01sdk/download/?file=macarm.tar.gz&version=1.0.63"
-      sha256 "920515460353246327b6cd00b87b6c18e2fb20413c6b25fea0b0002100c5b6bf"
+      url "https://app-int.q01.io/api/v4/q01sdk/download/?file=macarm.tar.gz&version=1.0.64"
+      sha256 "2512c2cc0b27d46c134102b38befe2a5995917320fe98e4a58eb0e2157e4f991"
     end
 
     on_intel do
-      url "https://app-int.q01.io/api/v4/q01sdk/download/?file=mac.tar.gz&version=1.0.63"
-      sha256 "a4b5c36fd416b553054d1d21dab490aadeaba4b2b989302b57e511e2fe9b644d"
+      url "https://app-int.q01.io/api/v4/q01sdk/download/?file=mac.tar.gz&version=1.0.64"
+      sha256 "693f2821efeb5268af96228e9181daa5a26a543f184b56218db6aa15416132f6"
     end
   end
 
   on_linux do
     on_arm do
-      url "https://app-int.q01.io/api/v4/q01sdk/download/?file=lin.tar.gz&version=1.0.63"
-      sha256 "9a6991e9da3bd5543a8dbb2fffe1063b1eaabc560a9aa8863edfe4e66d220e22"
+      url "https://app-int.q01.io/api/v4/q01sdk/download/?file=lin.tar.gz&version=1.0.64"
+      sha256 "f5a82ddcb0dccc67407331930b80ffae96126fd1a44ec9c15bf3a8357ca170ba"
     end
 
     on_intel do
-      url "https://app-int.q01.io/api/v4/q01sdk/download/?file=lin.tar.gz&version=1.0.63"
-      sha256 "9a6991e9da3bd5543a8dbb2fffe1063b1eaabc560a9aa8863edfe4e66d220e22"
+      url "https://app-int.q01.io/api/v4/q01sdk/download/?file=lin.tar.gz&version=1.0.64"
+      sha256 "f5a82ddcb0dccc67407331930b80ffae96126fd1a44ec9c15bf3a8357ca170ba"
     end
   end
 
   def install
-    local_bin = Pathname.new(Dir.home) / ".local" / "bin"
-    local_bin.mkpath
-    cp "q01sdk", local_bin / "q01sdk"
-    chmod 0755, local_bin / "q01sdk"
+    bin.install "q01sdk" => "q01sdk-int"
     config_dir = Pathname.new(Dir.home) / ".q01sdk"
     config_dir.mkpath
     env_file = config_dir / ".env"
@@ -40,6 +37,6 @@ class Q01sdkInt < Formula
   end
 
   test do
-    assert_match version.to_s, shell_output("#{Dir.home}/.local/bin/q01sdk --version")
+    assert_match version.to_s, shell_output("#{bin}/q01sdk-int --version")
   end
 end
