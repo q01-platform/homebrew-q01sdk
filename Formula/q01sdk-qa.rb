@@ -2,11 +2,11 @@
 class Q01sdkQa < Formula
   desc "Q01 Platform SDK CLI"
   homepage "https://app-qa.q01.io"
-  version "1.0.66"
+  version "1.0.67"
 
   on_macos do
     on_arm do
-      url "https://app-qa.q01.io/api/v4/q01sdk/download/?file=macarm.tar.gz&version=1.0.66"
+      url "https://app-qa.q01.io/api/v4/q01sdk/download/?file=macarm.tar.gz&version=1.0.67"
       sha256 "<!DOCTYPE html>
 <html lang="en">
   <head>
@@ -40,7 +40,7 @@ class Q01sdkQa < Formula
     end
 
     on_intel do
-      url "https://app-qa.q01.io/api/v4/q01sdk/download/?file=mac.tar.gz&version=1.0.66"
+      url "https://app-qa.q01.io/api/v4/q01sdk/download/?file=mac.tar.gz&version=1.0.67"
       sha256 "<!DOCTYPE html>
 <html lang="en">
   <head>
@@ -76,7 +76,7 @@ class Q01sdkQa < Formula
 
   on_linux do
     on_arm do
-      url "https://app-qa.q01.io/api/v4/q01sdk/download/?file=lin.tar.gz&version=1.0.66"
+      url "https://app-qa.q01.io/api/v4/q01sdk/download/?file=lin.tar.gz&version=1.0.67"
       sha256 "<!DOCTYPE html>
 <html lang="en">
   <head>
@@ -110,7 +110,7 @@ class Q01sdkQa < Formula
     end
 
     on_intel do
-      url "https://app-qa.q01.io/api/v4/q01sdk/download/?file=lin.tar.gz&version=1.0.66"
+      url "https://app-qa.q01.io/api/v4/q01sdk/download/?file=lin.tar.gz&version=1.0.67"
       sha256 "<!DOCTYPE html>
 <html lang="en">
   <head>
