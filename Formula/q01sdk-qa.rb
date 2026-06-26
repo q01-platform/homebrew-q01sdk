@@ -7,140 +7,24 @@ class Q01sdkQa < Formula
   on_macos do
     on_arm do
       url "https://app-qa.q01.io/api/v4/q01sdk/download/?file=macarm.tar.gz&version=1.0.67"
-      sha256 "<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <link rel="icon" href="/app/favicon.ico" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#000000" />
-    
-    <title>
-      q01 Platform
-    </title>
-    <script type="module" crossorigin src="/app/assets/index-f23fe82f.js"></script>
-    <link rel="stylesheet" href="/app/assets/style-37efb64a.css">
-  </head>
-  <body>
-    <noscript>You need to enable JavaScript to run this app.</noscript>
-    <div id="root"></div>
-    
-    <!--
-      This HTML file is a template.
-      If you open it directly in the browser, you will see an empty page.
-
-      You can add webfonts, meta tags, or analytics to this file.
-      The build step will place the bundled scripts into the <body> tag.
-
-      To begin the development, run `npm dev` or `yarn start`.
-      To create a production bundle, use `npm run build` or `yarn build`.
-    -->
-  </body>
-</html>"
+      sha256 "44b63c3abb5f564e8f28c2da05e275f4b4e54d67253706cb7e1423ef1d4c8bd9"
     end
 
     on_intel do
       url "https://app-qa.q01.io/api/v4/q01sdk/download/?file=mac.tar.gz&version=1.0.67"
-      sha256 "<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <link rel="icon" href="/app/favicon.ico" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#000000" />
-    
-    <title>
-      q01 Platform
-    </title>
-    <script type="module" crossorigin src="/app/assets/index-f23fe82f.js"></script>
-    <link rel="stylesheet" href="/app/assets/style-37efb64a.css">
-  </head>
-  <body>
-    <noscript>You need to enable JavaScript to run this app.</noscript>
-    <div id="root"></div>
-    
-    <!--
-      This HTML file is a template.
-      If you open it directly in the browser, you will see an empty page.
-
-      You can add webfonts, meta tags, or analytics to this file.
-      The build step will place the bundled scripts into the <body> tag.
-
-      To begin the development, run `npm dev` or `yarn start`.
-      To create a production bundle, use `npm run build` or `yarn build`.
-    -->
-  </body>
-</html>"
+      sha256 "cb73403dfebcc6acfa04ba5530186728351d1ca5171ed561f063fdb09be50e27"
     end
   end
 
   on_linux do
     on_arm do
       url "https://app-qa.q01.io/api/v4/q01sdk/download/?file=lin.tar.gz&version=1.0.67"
-      sha256 "<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <link rel="icon" href="/app/favicon.ico" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#000000" />
-    
-    <title>
-      q01 Platform
-    </title>
-    <script type="module" crossorigin src="/app/assets/index-f23fe82f.js"></script>
-    <link rel="stylesheet" href="/app/assets/style-37efb64a.css">
-  </head>
-  <body>
-    <noscript>You need to enable JavaScript to run this app.</noscript>
-    <div id="root"></div>
-    
-    <!--
-      This HTML file is a template.
-      If you open it directly in the browser, you will see an empty page.
-
-      You can add webfonts, meta tags, or analytics to this file.
-      The build step will place the bundled scripts into the <body> tag.
-
-      To begin the development, run `npm dev` or `yarn start`.
-      To create a production bundle, use `npm run build` or `yarn build`.
-    -->
-  </body>
-</html>"
+      sha256 "20a5eee356ef31ff0fb796acabab73bfc8a396f1f588cf0430ae1118aa3d511d"
     end
 
     on_intel do
       url "https://app-qa.q01.io/api/v4/q01sdk/download/?file=lin.tar.gz&version=1.0.67"
-      sha256 "<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <link rel="icon" href="/app/favicon.ico" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#000000" />
-    
-    <title>
-      q01 Platform
-    </title>
-    <script type="module" crossorigin src="/app/assets/index-f23fe82f.js"></script>
-    <link rel="stylesheet" href="/app/assets/style-37efb64a.css">
-  </head>
-  <body>
-    <noscript>You need to enable JavaScript to run this app.</noscript>
-    <div id="root"></div>
-    
-    <!--
-      This HTML file is a template.
-      If you open it directly in the browser, you will see an empty page.
-
-      You can add webfonts, meta tags, or analytics to this file.
-      The build step will place the bundled scripts into the <body> tag.
-
-      To begin the development, run `npm dev` or `yarn start`.
-      To create a production bundle, use `npm run build` or `yarn build`.
-    -->
-  </body>
-</html>"
+      sha256 "20a5eee356ef31ff0fb796acabab73bfc8a396f1f588cf0430ae1118aa3d511d"
     end
   end
 
@@ -149,7 +33,7 @@ class Q01sdkQa < Formula
     config_dir = Pathname.new(Dir.home) / ".q01sdk"
     config_dir.mkpath
     env_file = config_dir / ".env"
-    env_file.write("Host=\"https://app-qa.q01.io\"\nEnv=\"qa\"\nDEVTOOL=devspace\n")
+    env_file.write("Host=\"https://app-qa.q01.io\"\nEnv=\"qa\"\n")
   end
 
   test do
