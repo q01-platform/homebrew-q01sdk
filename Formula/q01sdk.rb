@@ -2,29 +2,29 @@
 class Q01sdk < Formula
   desc "Q01 Platform SDK CLI"
   homepage "https://app.q01.io"
-  version "1.0.67"
+  version "1.0.73"
 
   on_macos do
     on_arm do
-      url "https://app.q01.io/api/v4/q01sdk/download/?file=macarm.tar.gz&version=1.0.67"
-      sha256 "44b63c3abb5f564e8f28c2da05e275f4b4e54d67253706cb7e1423ef1d4c8bd9"
+      url "https://sdk.q01.io/q01sdk/prod/q01sdk-darwin-arm64.tar.gz"
+      sha256 "0ab3c8c490d61189fd64783caea8c23bf1416b147fa434af1f2d104ea68d3342"
     end
 
     on_intel do
-      url "https://app.q01.io/api/v4/q01sdk/download/?file=mac.tar.gz&version=1.0.67"
-      sha256 "cb73403dfebcc6acfa04ba5530186728351d1ca5171ed561f063fdb09be50e27"
+      url "https://sdk.q01.io/q01sdk/prod/q01sdk-darwin-amd64.tar.gz"
+      sha256 "44fc072a34b28585e9f4181a52c7c2cc5970a013f1dbd7b05a2869937107f340"
     end
   end
 
   on_linux do
     on_arm do
-      url "https://app.q01.io/api/v4/q01sdk/download/?file=lin.tar.gz&version=1.0.67"
-      sha256 "20a5eee356ef31ff0fb796acabab73bfc8a396f1f588cf0430ae1118aa3d511d"
+      url "https://sdk.q01.io/q01sdk/prod/q01sdk-linux-amd64.tar.gz"
+      sha256 "db851a3f2a8888b2aabf567b6fc320af03680b14c474a12b9b82855a9ce40104"
     end
 
     on_intel do
-      url "https://app.q01.io/api/v4/q01sdk/download/?file=lin.tar.gz&version=1.0.67"
-      sha256 "20a5eee356ef31ff0fb796acabab73bfc8a396f1f588cf0430ae1118aa3d511d"
+      url "https://sdk.q01.io/q01sdk/prod/q01sdk-linux-amd64.tar.gz"
+      sha256 "db851a3f2a8888b2aabf567b6fc320af03680b14c474a12b9b82855a9ce40104"
     end
   end
 
@@ -33,7 +33,7 @@ class Q01sdk < Formula
     config_dir = Pathname.new(Dir.home) / ".q01sdk"
     config_dir.mkpath
     env_file = config_dir / ".env"
-    env_file.write("")
+    env_file.write("DEVTOOL=devspace\n")
   end
 
   test do
