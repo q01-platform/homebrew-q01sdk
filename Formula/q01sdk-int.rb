@@ -2,17 +2,17 @@
 class Q01sdkInt < Formula
   desc "Q01 Platform SDK CLI"
   homepage "https://app-int.q01.io"
-  version "1.10.4"
+  version "1.10.5"
 
   on_macos do
     on_arm do
       url "https://sdk.q01.io/q01sdk/int/#{version}/q01sdk-darwin-arm64.tar.gz"
-      sha256 "cd871317b165f60eb359c88d2f57a0a5ee84c0614cac182fec84024c478eb409"
+      sha256 "cd66bc890a6c7b407fbc28218a2d77fbe5c81c8a7d521f0841f4fa501063ee85"
     end
 
     on_intel do
       url "https://sdk.q01.io/q01sdk/int/#{version}/q01sdk-darwin-amd64.tar.gz"
-      sha256 "6b4b4c86e177864ea19d2e247bb6f6e17af9f82ac2e63b463173d182f4d76cf0"
+      sha256 "e42c65c8bb5dc68380ee2a2cf655095a430c57f2a2cda2f608013612f091876e"
     end
   end
 
@@ -20,12 +20,12 @@ class Q01sdkInt < Formula
     # NOTE: no linux-arm64 build target yet — arm falls back to the amd64 binary.
     on_arm do
       url "https://sdk.q01.io/q01sdk/int/#{version}/q01sdk-linux-amd64.tar.gz"
-      sha256 "1459e9b030ae9d4e62871ca8c8f128d72894b7b06f464a2dd832c9118ff8babb"
+      sha256 "e0116d2ef4f777c2d5e04dbb3a1dc44dc5d00ac63ff8ac59e25f852e7ca3825d"
     end
 
     on_intel do
       url "https://sdk.q01.io/q01sdk/int/#{version}/q01sdk-linux-amd64.tar.gz"
-      sha256 "1459e9b030ae9d4e62871ca8c8f128d72894b7b06f464a2dd832c9118ff8babb"
+      sha256 "e0116d2ef4f777c2d5e04dbb3a1dc44dc5d00ac63ff8ac59e25f852e7ca3825d"
     end
   end
 
